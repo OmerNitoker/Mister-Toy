@@ -12,13 +12,14 @@ export function ToyFilter({ filterBy, onSetFilter }) {
     onSetFilter = useRef(utilService.debounce(onSetFilter))
 
     useEffect(() => {
+        // console.log('filterByToEdit - useEffect - filter' , filterByToEdit)
         onSetFilter.current(filterByToEdit)
     }, [filterByToEdit])
 
     function handleChange({ target }) {
-        console.log('target', target)
+        // console.log('target', target)
         let { value, name: field, type } = target
-        console.dir(target)
+        // console.dir(target)
         if (field === 'inStock' && value === '') {
             value = ''
         } else if (type === 'select-one') {

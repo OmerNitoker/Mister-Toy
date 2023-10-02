@@ -34,6 +34,7 @@ export function ToyIndex() {
             })
     }
 
+
     function onAddToy() {
         const toyToSave = toyService.getEmptyToy()
         saveToy(toyToSave)
